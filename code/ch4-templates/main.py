@@ -1,19 +1,17 @@
 import fastapi
+import fastapi_chameleon
 import uvicorn
+from fastapi_chameleon import template
 
 app = fastapi.FastAPI()
 
+fastapi_chameleon.global_init("code\\ch4-templates\\templates")
+
 
 @app.get("/")
+@template(template_file="index.html")
 def index():
-    content = """
-
-    <h1>Hello - FastAPI Testing </h1>
-    <div>Fake app lives here</div>
-
-    """
-    response = fastapi.responses.HTMLResponse(content)
-    return response
+    return {"user_name": "Jeffro"}
 
 
 if __name__ == "__main__":
