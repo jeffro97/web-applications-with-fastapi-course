@@ -18,11 +18,12 @@
     <div>
         <a href="/">Home</a>
         <a href="/about">About</a>
-        <br>
     </div>
 
     <div class="main-content">
-        <div metal:define-slot="content" tal:omit-tag="True">No Content</div>
+        <div metal:define-slot="content" tal:omit-tag="True">
+            <br>No Content
+        </div>
     </div>
 
     <footer>
