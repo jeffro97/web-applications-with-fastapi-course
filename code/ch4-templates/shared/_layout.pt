@@ -4,11 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Fake PyPI</title>
-    <style>
-        body {
-            background: rgb(172, 247, 242)
-        }
-    </style>
+    <link rel="stylesheet" href="/static/site.css"
 </head>
 
 <body>
@@ -18,19 +14,20 @@
     <div>
         <a href="/">Home</a>
         <a href="/about">About</a>
+        <br>
+        ================ End Header ================
     </div>
 
     <div class="main-content">
-        <div metal:define-slot="content" tal:omit-tag="True">
-            <br>No Content
-        </div>
+        <div metal:define-slot="content" tal:omit-tag="True"><br>No Content</div>
     </div>
 
     <footer>
         <br>
-        Footer: Thanks for visting. <br>
-        Contact us at: <br>
-        facebook: something_here <br>
+        ================ Begin Footer ================ <br>
+        Thanks for visting. <br>
+        Contact at: <br>
+        friendface: something_here <br>
     </footer>
 </body>
 

@@ -1,5 +1,6 @@
 <div metal:use-macro="load: ../shared/_layout.pt">
-    <div metal:fill-slot="contnet" tal:omit-tag="True">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+        <br>
         <div>About Fake PyPI</div>
     </div>
 </div>
