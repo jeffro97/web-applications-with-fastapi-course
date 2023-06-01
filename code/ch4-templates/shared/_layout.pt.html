@@ -6,25 +6,27 @@
     <title>Fake PyPI</title>
     <style>
         body {
-            background: rgb(66, 226, 66)
+            background: rgb(172, 247, 242)
         }
     </style>
 </head>
 
 <body>
 
-    <h1>PyPI Site</h1>
+    <h1>PyPI Site<br></h1>
 
     <div>
-        <a href="/">home</a>
-        <a href="/about">about</a>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <br>
     </div>
 
-    <div class="content">
+    <div class="main-content">
         <div metal:define-slot="content" tal:omit-tag="True">No Content</div>
     </div>
 
     <footer>
+        <br>
         Footer: Thanks for visting. <br>
         Contact us at: <br>
         facebook: something_here <br>
