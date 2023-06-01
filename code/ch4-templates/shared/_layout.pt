@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Fake PyPI</title>
+</head>
+
+<body>
+
+    <h1>PyPI Site</h1>
+
+    <div class="content">
+        <div metal:define-slot="content" tal:omit-tag="True">No Content</div>
+    </div>
+
+    <footer>
+        Footer: Thanks for visting. <br>
+        Contact us at: <br>
+        facebook: something_here <br>
+    </footer>
+</body>
+
+</html>
