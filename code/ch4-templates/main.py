@@ -5,13 +5,28 @@ from views import account, home, packages
 
 app = fastapi.FastAPI()
 
-fastapi_chameleon.global_init("code\\ch4-templates\\templates")
 
-app.include_router(home.router)
-app.include_router(account.router)
-app.include_router(packages.router)
+def main():
+    configure()
+    uvicorn.run(app, host="127.0.0.1", port=8000)
+
+
+def configure():
+    configure_templates()
+    configure_routes()
+
+
+def configure_templates():
+    fastapi_chameleon.global_init("code\\ch4-templates\\templates")
+
+
+def configure_routes():
+    app.include_router(home.router)
+    app.include_router(account.router)
+    app.include_router(packages.router)
 
 
 if __name__ == "__main__":
-    # noinspection PyTypeChecker
-    uvicorn.run(app)
+    main()
+else:
+    configure()
