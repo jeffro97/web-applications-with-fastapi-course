@@ -14,7 +14,7 @@ def index(user: str = "anonyomus"):
         'packages': [
             {'id': 'fastapi',  'summary': 'A web framework'},
             {'id':'uvicorn',  'summary': 'ASGI server'},
-            {'id':'httpx',  'summary': 'requests fro an async world'},
+            {'id':'httpx',  'summary': 'requests for an async world'},
         ]
     }
 
