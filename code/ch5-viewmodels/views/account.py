@@ -1,5 +1,6 @@
 import fastapi
 from fastapi_chameleon import template
+from viewmodels.accounts.account_view_model import AccountViewModel
 
 router = fastapi.APIRouter()
 
