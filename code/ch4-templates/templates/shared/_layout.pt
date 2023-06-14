@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake PyPI</title>
+</head>
+<body>
+
+    <h1>Fake PyPI Site</h1>
+
+    <div class="main-content">
+    <!-- To control what goes in this section with chameleon, have to define a slot.
+    Define a slot with the following-->
+        <div metal:define-slot="content" tal:omit-tag="True"> No Content</div>
+    </div>
+
+<footer>
+    Footer: This is the footer.<br>
+    Thanks for getting here<br>
+</footer>
+</body>
+</html>
