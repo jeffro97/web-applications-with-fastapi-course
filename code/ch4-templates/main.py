@@ -6,6 +6,10 @@ import fastapi
 import uvicorn
 import fastapi_chameleon
 from starlette.staticfiles import StaticFiles
+# To use static files (CSS, images, etc) you have to do 3 things for Chameleon to work.
+# 1. add above import statement
+# 2. install aiofiles package
+# 3.
 
 from views import home, account, packages
 
