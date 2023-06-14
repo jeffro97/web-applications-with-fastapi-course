@@ -5,35 +5,44 @@ FastAPI Course
 import fastapi
 import uvicorn
 import fastapi_chameleon
-from fastapi_chameleon import template
+from views import home, account, packages
 
 app = fastapi.FastAPI()
-fastapi_chameleon.global_init('templates')
 
 
-@app.get('/')
-@template(template_file='index.html')
-def index(user: str = 'Anon-O-moose'):
-    return {
-        'username': user
-    }
+def main():
+    """
+    Main function to run app. First run configure, then run uvicorn to start up web services.
+    """
+    configure()
+    uvicorn.run(app, host='127.0.0.1', port=8000)
 
-@app.get('/')
-def about():
-    return {}
 
-@app.get('/account')
-def index():
-    return {}
+def configure():
+    """
+    Function to run configuration for  templates and routes
+    """
+    configure_templates()
+    configure_route()
 
-@app.get('/account/login')
-def login():
-    return {}
 
-@app.get('/account/logout')
-def logout():
-    return {}
+def configure_templates():
+    """
+    Function to initialize templates directory.
+    """
+    fastapi_chameleon.global_init('templates')
+
+
+def configure_route():
+    """
+    Function to configure routes to various views/templates.
+    """
+    app.include_router(home.router)
+    app.include_router(account.router)
+    app.include_router(packages.router)
 
 
 if __name__ == '__main__':
-    uvicorn.run(app)
+    main()
+else:
+    configure()
