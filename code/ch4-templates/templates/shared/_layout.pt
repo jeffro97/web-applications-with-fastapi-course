@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Fake PyPI</title>
+    <link rel="stylesheet" href="/static/site.css">
 </head>
 <body>
 
     <h1>Fake PyPI Site</h1>
+    <div>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </div>
 
     <div class="main-content">
-    <!-- To control what goes in this section with chameleon, have to define a slot.
+    <!-- To control what goes in this section with chameleon, have to define a slot of where content will go.
     Define a slot with the following-->
-        <div metal:define-slot="content" tal:omit-tag="True"> No Content</div>
+        <div metal:define-slot="content" tal:omit-tag="True"> ----NO CONTENT---- </div>
+        <!-- If no content, then add NO CONTENT words. Otherwise, this DIV will be removed.
+        The content will be added -->
     </div>
 
 <footer>

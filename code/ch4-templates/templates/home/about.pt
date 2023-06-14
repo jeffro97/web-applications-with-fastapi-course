@@ -2,12 +2,6 @@
 <div metal:use-macro="load: ../shared/_layout.pt">
     <!-- Now load content and omit the tag. -->
     <div metal:fill-slot="content" tal:omit-tag="True">
-        <div>User: ${username}</div>
-        <ul>
-            <li>FastAPI</li>
-            <li>stuff</li>
-            <li>stuff2</li>
-            <li>stuff3</li>
-        </ul>
+        <div>About Fake PyPI<br></div>
     </div>
 </div>

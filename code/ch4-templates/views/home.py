@@ -12,5 +12,7 @@ def index(user: str = 'Anon-O-moose'):
     }
 
 @router.get('/about')
+@template()
+# If add about.pt into 'templates' directory, chameleon will auto find file.
 def about():
     return {}

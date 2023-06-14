@@ -5,6 +5,8 @@ FastAPI Course
 import fastapi
 import uvicorn
 import fastapi_chameleon
+from starlette.staticfiles import StaticFiles
+
 from views import home, account, packages
 
 app = fastapi.FastAPI()
@@ -37,6 +39,7 @@ def configure_route():
     """
     Function to configure routes to various views/templates.
     """
+    app.mount('/static', StaticFiles(directory='static'), name='static')
     app.include_router(home.router)
     app.include_router(account.router)
     app.include_router(packages.router)
