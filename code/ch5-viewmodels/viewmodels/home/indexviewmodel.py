@@ -1,4 +1,4 @@
+from viewmodels.shared.viewmodel import ViewModelBase
 
-
-
-class IndexViewModel(IndexViewModel):
+class IndexViewModel(ViewModelBase):
+    pass
