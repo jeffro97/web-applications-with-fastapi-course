@@ -6,9 +6,16 @@ router = fastapi.APIRouter()
 # Can use HTML, but chameleon reads .pt files if nothing is given.
 # Example:  @template(template_file='home/index.html')
 @template()
-def index(user: str = 'Anon-O-moose'):
+def index():
     return {
-        'username': user
+        'package_count': 274_999,
+        'release_count': 2_945_123,
+        'user_count': 3_987,
+        'packages': [
+            {'id': 'fastapi', 'summary': "Web framework"},
+            {'id': 'uvicorn', 'summary': "ASGI Server"},
+            {'id': 'httpx', 'summary': "Request for async world"},
+        ]
     }
 
 @router.get('/about')
