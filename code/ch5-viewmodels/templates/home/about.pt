@@ -1,0 +1,7 @@
+<!-- This is to load the layout -->
+<div metal:use-macro="load: ../shared/_layout.pt">
+    <!-- Now load content and omit the tag. -->
+    <div metal:fill-slot="content" tal:omit-tag="True">
+        <div>About Fake PyPI<br></div>
+    </div>
+</div>
